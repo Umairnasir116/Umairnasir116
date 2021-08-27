@@ -29,7 +29,7 @@ public class BaseTest {
         }
 
         // connect db connection
-        DatabaseConnectivity.dbConnection();
+        //DatabaseConnectivity.dbConnection();
     }
 
     @BeforeMethod()
@@ -79,7 +79,6 @@ public class BaseTest {
     @AfterSuite()
     public void endReport() throws InterruptedException {
         Thread.sleep(5000);
-        //WebDriverFactory.finishDriver();
         if ("true".equals(IsEnableReporting)) {
             MainCall.getExtentReport().flush();
             MainCall.getExtentReport().close();

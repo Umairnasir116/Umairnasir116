@@ -26,7 +26,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import org.hamcrest.Matcher;
+
 import org.hamcrest.Matchers;
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -101,14 +101,25 @@ public class ReusableFunctions {
         contentType("application/json");
         EnvGlobals.requestSpecification = REQUEST.given().auth().basic(username, password).cookie(Cookie);
         }
+        public static String getPathResponse(String key) {
+                return EnvGlobals.response.getBody().path(key, new String[0]).toString();
+        }
 
         public static String getResponsePath(String key) {
-        return EnvGlobals.response.getBody().path(key, new String[0]).toString();
+                return EnvGlobals.response.getBody().path(key, new String[0]).toString();
         }
+
 
         public static int getLength(String Path) {
         return (Integer)EnvGlobals.response.body().path(Path, new String[0]);
         }
+        public static int getLength1(String Path) {
+                return EnvGlobals.response.body().path(Path);
+        }
+
+
+
+
 
 //        public static void verifySchema(String jsonFile) {
 //        ((ValidatableResponse)((ValidatableResponse)((ValidatableResponse)EnvGlobals.response.then()).log().all()).assertThat()).body(JsonSchemaValidator.matchesJsonSchemaInClasspath(jsonFile), new Matcher[0]);

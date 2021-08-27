@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Rest Assured Framework">
+    <test name="Rest Assured Framework" group-by-instances="true">
+        <classes>
+            <class name="testcases.User">
+                <methods>
+                    <include name="userLogin"/>
+                    <include name="validUser"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
