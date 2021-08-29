@@ -28,6 +28,8 @@ public class ConfigProperties {
     public static  String resourcesserverPort = appConfig.getresourcesserverPort();
     public static  String publicUserLogin = appConfig.getpublicUserLogin();
     public static String userPhoneNo = appConfig.getUserPhoneNo();
+    public static String filePath = appConfig.getFilePath();
+
 
 
 }

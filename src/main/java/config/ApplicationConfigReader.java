@@ -141,5 +141,8 @@ public class ApplicationConfigReader {
     {
         return this.userPhoneNo;
     }
+    public String getFilePath() {
+        return System.getProperty("user.dir") + "/files";
+    }
 
 }

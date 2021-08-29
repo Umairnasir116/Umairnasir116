@@ -14,6 +14,7 @@ public class EnvGlobals {
 
     public static Response response; // API response object
     public static RequestSpecification requestSpecification; // given store object
+    public static String version = "/v1";
     public static String basicAccessToken = "Basic cHVibGljOnB1YmxpYw==";
     public static String appbasicToken = "Basic bW9iaWxlLWFwcDpkYjUwNjk2YS03MjViLTExZWEtYmM1NS0wMjQyYWMxMzAwMDM=";
     public static String authorizationToken; // authorization key with bearer

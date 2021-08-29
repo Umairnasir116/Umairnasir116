@@ -13,8 +13,10 @@ public class EndpointURLs {
 
     public static final String createUser2 = "/api/users";
     public static final String User2List = "/api/users?page=1";
-    public static final String userLogin = "/v1/api/public/user/login";
-    public static final String validUser = "/v1/api/public/user/is-valid";
+    public static final String userLogin = "/api/public/user/login";
+    public static final String validUser = "/api/public/user/is-valid";
+    public static final String imageUpload = "/api/public/resource/upload";
+
 
 
 }
