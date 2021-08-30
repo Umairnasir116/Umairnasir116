@@ -19,6 +19,5 @@ public class Resource extends BaseTest {
         ReusableFunctions.thenFunction(200);
         validations.ResourceImage.verifyImageUpload();
 
-
     }
 }

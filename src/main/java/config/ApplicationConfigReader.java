@@ -67,23 +67,9 @@ public class ApplicationConfigReader {
 
     @Property("filePath")
     private String sheetPath;
-
-    @Property("resourcesBaseUrl")
-    private String resourcesBaseUrl;
-
-    @Property("resourcesserverPort")
-    private String resourcesserverPort;
-
-    @Property("publicUserLogin")
-    private String publicUserLogin;
-
-    @Property("userPhoneNo")
-    private String userPhoneNo;
-
     public ApplicationConfigReader() {
         PropertyLoader.newInstance().populate(this);
     }
-
 
     public String getGrantType() {
         return grantType;
@@ -93,9 +79,7 @@ public class ApplicationConfigReader {
         return clientId;
     }
     public String getDbUrl() {
-        //return !isNullOrEmpty(dbUrl) ? dbUrl : System.getenv("dbUrl");
-        return !isNullOrEmpty(this.dbUrl) ? this.dbUrl : System.getenv("TestRailToken");
-
+        return !isNullOrEmpty(dbUrl) ? dbUrl : System.getenv("dbUrl");
     }
     public String getDbUsername() {
         return !isNullOrEmpty(dbUserName) ? dbUserName : System.getenv("dbUserName");
@@ -128,19 +112,6 @@ public class ApplicationConfigReader {
         return this.isEnableReporting;
     }
     public String getAuthUrl() { return authUrl; }
-    public String getResourcesBaseUrl()
-        {
-        return this.resourcesBaseUrl;
-    }
-
-    public String getpublicUserLogin() { return publicUserLogin; }
-    public String getresourcesserverPort() {
-        return this.resourcesserverPort;
-    }
-    public String getUserPhoneNo()
-    {
-        return this.userPhoneNo;
-    }
     public String getFilePath() {
         return System.getProperty("user.dir") + "/files";
     }
